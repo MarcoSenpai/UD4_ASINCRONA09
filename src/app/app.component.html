@@ -1,0 +1,18 @@
+  <form>
+    <div class="container">
+      <label for="firstNumber">First Number: </label>
+      <input type="number" name="firstNumber" [(ngModel)]="formulario.firstNumber">
+    </div>
+    <div class="container">
+      <label for="secondNumber">Second Number: </label>
+      <input type="number" name="secondNumber" [(ngModel)]="formulario.secondNumber">
+    </div>
+    <select [(ngModel)]="formulario.operation" (change)="operation()" name="operation" id="operation">
+      <option value="None">Seleccione una operacion</option>
+      <option value="Suma">Suma</option>
+      <option value="Resta">Resta</option>
+      <option value="Multiplicación">Multiplicación</option>
+      <option value="División">División</option>
+    </select>
+    <div [ngStyle]="{'color':formulario.color}">{{formulario.message}} </div>
+  </form>
